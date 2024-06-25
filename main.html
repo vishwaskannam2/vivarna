@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;
+            background-image: url('images/logo.jpg'); /* Path to your background image */
+            background-size: cover; /* Makes the background cover the entire area */
+            background-repeat: no-repeat; /* Ensures the background image does not repeat */
+            background-position: center center; 
+        }
+        .login-panel {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        .login-panel h2 {
+            margin-bottom: 20px;
+        }
+        .login-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-light p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="#"><img src="logo.jpg" alt="Website Logo" height="50"></a>
+                </div>
+                <nav>
+                    <a href="#" class="mr-3">Home</a>
+                    <a href="#" class="mr-3">About Us</a>
+                    <a href="#" class="mr-3">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container text-center mt-5">
+        <h1>Welcome to Our Vivarna</h1>
+        <p>Select your login below to access our portal</p>
+        
+        <div class="login-options">
+            <div class="login-panel">
+                <h2>User Login</h2>
+                <a href="use-login.html" class="btn btn-primary">Login as User</a>
+            </div>
+            <div class="login-panel">
+                <h2>Worker Login</h2>
+                <a href="worker-login.html" class="btn btn-success">Login as Worker</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

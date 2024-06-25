@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">VIVARNA<span></span></a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#projects">projects</a>
+            <a href="workers.html" class="btn btn-primary">Workers</a>
+        </nav>
+        <div class="email-display">
+            <span id="user-email"></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>List of Workers</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody id="worker-table-body">
+                <!-- Worker data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch workers data from the server
+        fetch('/api/workers')  // Update this endpoint to match your server's API
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('worker-table-body');
+                data.forEach(worker => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${worker.name}</td>
+                        <td>${worker.email}</td>
+                        <td>${worker.role}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching workers data:', error));
+    </script>
+</body>
+</html>

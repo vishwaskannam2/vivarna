@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Home Page</h1>
+        <p>Logged in as: <span id="userEmail"></span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.getElementById('userEmail').innerText = userEmail;
+            } 
+        });
+    </script>
+</body>
+</html>
